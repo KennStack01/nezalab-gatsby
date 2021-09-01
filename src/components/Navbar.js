@@ -4,7 +4,8 @@ import { Link } from "gatsby";
 // import { Fragment } from 'react'
 import { Disclosure } from "@headlessui/react";
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { CgMenuCheese, CgClose } from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
+import { RiMenu3Line } from "react-icons/ri";
 // import { StaticImage } from "gatsby-plugin-image";
 import Logo from "../assets/NezaLab-Logo.svg";
 
@@ -32,7 +33,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="">
+    <Disclosure as="nav" className="text-gray-900">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 z-50">
@@ -44,16 +45,13 @@ export default function Navbar() {
                   {open ? (
                     <CgClose className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <CgMenuCheese
-                      className="block h-6 w-6"
-                      aria-hidden="true"
-                    />
+                    <RiMenu3Line className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-start sm:items-start sm:justify-end md:flex-row md:justify-between">
                 <Link to="/" className="flex-shrink-0 flex items-center">
-                  <Logo width={120} quality={95} placeholder="blurred" />
+                  <Logo width={120} />
                   {/* <StaticImage
                     src="../images/creafrika-btp.png"
                     width={120}
@@ -77,7 +75,7 @@ export default function Navbar() {
                           "py-3 px-8 text-sm font-semibold"
                         )}
                         aria-current={item.current ? "page" : undefined}
-                        activeStyle={activeLinkStyles + " font-bold"}
+                        activeStyle={activeLinkStyles}
                         activeClassName="active"
                       >
                         {item.name}
@@ -90,7 +88,7 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden z-50">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <nav className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -108,7 +106,7 @@ export default function Navbar() {
                   {item.name}
                 </Link>
               ))}
-            </div>
+            </nav>
           </Disclosure.Panel>
         </>
       )}
