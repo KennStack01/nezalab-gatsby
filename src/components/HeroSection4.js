@@ -8,15 +8,15 @@ const HeroSection = ({ description, picture }) => {
         {" "}
         {description}{" "}
       </p>
-      <p className="absolute text-xs text-gray-900 font-medium text-center mx-14 z-40 mt-44 mb-8 xs:visible md:invisible">
-        {" "}
-        {description}{" "}
-      </p>
       <img
         alt="Hero picture"
         className="relative object-cover w-full"
         src={picture}
       />
+      <p className=" text-xs text-gray-900 font-medium text-center mx-14 z-40 mt-10 mb-8 xs:visible md:invisible">
+        {" "}
+        {description}{" "}
+      </p>
     </div>
   );
 };

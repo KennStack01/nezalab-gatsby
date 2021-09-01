@@ -52,7 +52,7 @@ function Products() {
         title="Home"
       />
       <div>
-        <h1 className="text-4xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10">
+        <h1 className="text-3xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-6 md:mt-24 ml-5 sm:ml-10">
           {" "}
           Our <br />{" "}
           <span className="text-jaffa-500">
