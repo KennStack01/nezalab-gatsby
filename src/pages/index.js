@@ -1,27 +1,74 @@
+/* eslint-disable react/prop-types */
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import HeroSection from "../components/HeroSection";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+// import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
 function IndexPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsHomePageContent {
+        heroPicture {
+          filename
+          url
+        }
+        descriptionNode {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  `);
+
+  const description =
+    data.datoCmsHomePageContent.descriptionNode.internal.content;
+  const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
+
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `nezalab`,
+          `company`,
+          `Neza Lab`,
+          `agakoti`,
+          "business china",
+          "technology africa",
+          "multinational",
+          "neza lab",
+          "agakoti vpn",
+          "vpn china",
+          "business consultancy",
+          "Network Security",
+          "E-Commerce",
+          "finance",
+          "startup china",
+          "africa network Business",
+        ]}
         title="Home"
       />
-
-      <section className="text-center">
-        <img
+      <div>
+        <h1 className="text-4xl sm:text-7xl font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10">
+          {" "}
+          We are <br /> <span className="text-jaffa-500">
+            {" "}
+            Productive.
+          </span>{" "}
+        </h1>
+        <div className="">
+          <HeroSection description={description} picture={pictureUrl} />
+        </div>
+      </div>
+      <section className="">
+        {/* <img
           alt="Cat and human sitting on a couch"
           className="block w-1/2 mx-auto mb-8"
           src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
+        /> */}
       </section>
     </Layout>
   );

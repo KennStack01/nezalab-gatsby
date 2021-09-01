@@ -1,10 +1,33 @@
+/* eslint-disable react/prop-types */
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import HeroSection2 from "../components/HeroSection2";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+// import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
 function About() {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsAboutPageContent {
+        heroPicture {
+          filename
+          url
+        }
+        descriptionNode {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  `);
+
+  const description =
+    data.datoCmsAboutPageContent.descriptionNode.internal.content;
+  const pictureUrl = data.datoCmsAboutPageContent.heroPicture.url;
+
   return (
     <Layout>
       <SEO
@@ -26,32 +49,23 @@ function About() {
           "startup china",
           "africa network Business",
         ]}
-        title="About"
+        title="Home"
       />
-
-      <section className="text-center">
-        <img
+      <div>
+        <h1 className="text-4xl sm:text-7xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10">
+          {" "}
+          About <br /> <span className="text-jaffa-500"> Neza Lab.</span>{" "}
+        </h1>
+        <div className="">
+          <HeroSection2 description={description} picture={pictureUrl} />
+        </div>
+      </div>
+      <section className="">
+        {/* <img
           alt="Cat and human sitting on a couch"
           className="block w-1/2 mx-auto mb-8"
           src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
-        </p>
+        /> */}
       </section>
     </Layout>
   );

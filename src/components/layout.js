@@ -11,11 +11,11 @@ import Logo from "../assets/NezaLab-Logo-white.svg";
 function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen font-sans text-white">
-      <Header />
+      <div className="">
+        <Header />
+      </div>
 
-      <main className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
-        {children}
-      </main>
+      <main className="flex-1 w-full mx-auto pb-4 md:pb-8">{children}</main>
 
       <footer
         className="md:pt-8 md:px-8 divide-y divide-white"
