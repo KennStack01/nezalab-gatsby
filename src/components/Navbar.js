@@ -32,7 +32,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="text-gray-900">
+    <Disclosure as="nav" className="text-gray-900 ">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 z-50">
