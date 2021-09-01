@@ -14,6 +14,7 @@ const HeroSection = ({ description, picture }) => {
         src={picture}
         placeholder="blurred"
         loading="lazy"
+        layout="fixed"
       />
       <p className="text-xs text-gray-900 text-center mx-14 z-40 mt-10 mb-8 xs:visible md:invisible">
         {" "}
