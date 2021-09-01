@@ -12,6 +12,8 @@ const HeroSection = ({ description, picture }) => {
         alt="Hero picture"
         className="relative object-cover w-full"
         src={picture}
+        placeholder="blurred"
+        loading="lazy"
       />
       <p className=" text-xs text-gray-900 font-medium text-center mx-14 z-40 mt-10 mb-8 xs:visible md:invisible">
         {" "}
