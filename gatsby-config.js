@@ -5,11 +5,24 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `NezaLab Technology  Ltd`,
+    description: `Active since 2018, we have completed a range of 
+      projects in Networks Security, E-commerce, 
+      Finance and other sectors`,
+    author: `@Nezalab`,
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
@@ -19,9 +32,9 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.green["500"],
+        theme_color: "#58595B",
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/circle-64.png`,
       },
     },
     {

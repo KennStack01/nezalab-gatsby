@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
-function About() {
+function Products() {
   return (
     <Layout>
       <SEO
@@ -26,7 +26,7 @@ function About() {
           "startup china",
           "africa network Business",
         ]}
-        title="About"
+        title="Products"
       />
 
       <section className="text-center">
@@ -57,4 +57,4 @@ function About() {
   );
 }
 
-export default About;
+export default Products;
