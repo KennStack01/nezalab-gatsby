@@ -18,13 +18,12 @@ const navigation = [
 ];
 
 const activeLinkStyles = {
-  color: "white",
-  backgroundColor: "#239FCD",
-  cursor: "pointer",
-  paddingTop: "",
-  paddingBottom: "",
-  paddingLeft: "",
-  paddingRight: "",
+  color: "#58595B",
+  fontWeight: "bold",
+  textDecoration: "underline",
+  textDecorationColor: "#F19E39",
+  textUnderlinePosition: "under",
+  textDecorationThickness: "3px",
 };
 
 function classNames(...classes) {
@@ -50,8 +49,11 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-start sm:items-start sm:justify-end md:flex-row md:justify-between">
-                <Link to="/" className="flex-shrink-0 flex items-center">
-                  <Logo width={120} />
+                <Link
+                  to="/"
+                  className="flex-shrink-0 flex items-center my-auto"
+                >
+                  <Logo width={100} />
                   {/* <StaticImage
                     src="../images/creafrika-btp.png"
                     width={120}
@@ -71,8 +73,8 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "bg-white text-gray-600"
-                            : "text-gray-900 hover:text-curious-blue-500",
-                          "py-3 px-8 text-sm font-semibold"
+                            : "text-gray-900",
+                          "py-3 px-8 text-sm font-semibold hover:underline"
                         )}
                         aria-current={item.current ? "page" : undefined}
                         activeStyle={activeLinkStyles}
