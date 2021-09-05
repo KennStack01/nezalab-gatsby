@@ -49,7 +49,7 @@ function Products() {
           "startup china",
           "africa network Business",
         ]}
-        title="Home"
+        title="Products"
       />
       <div>
         <h1 className="text-3xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-6 md:mt-24 ml-5 sm:ml-10">

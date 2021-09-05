@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import HeroSection from "../components/HeroSection";
 
 import Layout from "../components/layout";
@@ -20,6 +20,14 @@ function IndexPage() {
             content
           }
         }
+        developmentPicture {
+          filename
+          url
+        }
+        contactPicture {
+          filename
+          url
+        }
       }
     }
   `);
@@ -27,6 +35,8 @@ function IndexPage() {
   const description =
     data.datoCmsHomePageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
+  const pictureDevelopment = data.datoCmsHomePageContent.developmentPicture.url;
+  const pictureContact = data.datoCmsHomePageContent.contactPicture.url;
 
   return (
     <Layout>
@@ -64,7 +74,7 @@ function IndexPage() {
         </div>
       </div>
       <section className="">
-        <div className="flex flex-row justify-around text-black text-xl md:text-4xl font-semibold my-5 md:my-10">
+        <div className="flex flex-row justify-around text-black text-xl md:text-4xl font-semibold mt-5 md:my-10">
           <h1>
             Reliable<span className="text-jaffa-500">.</span>
           </h1>
@@ -75,15 +85,45 @@ function IndexPage() {
             Fast<span className="text-jaffa-500">.</span>
           </h1>
         </div>
-        <div className="flex flex-col my-14 md:my-24 text-black">
-          <h1 className="text-lg md:text-3xl font-semibold md:font-bold mx-auto ">
+        <div className="flex flex-col my-14 md:my-20 text-black">
+          <h1 className="text-lg md:text-4xl font-semibold md:font-bold mx-auto ">
             Our Development principle
           </h1>
-          <p className="mx-3 my-3 md:my-8 md:mx-60 text-center">
+          <p className="mx-3 my-3 md:my-8 md:mx-60 text-center md:text-xl">
             We are so thrilled and proud of following the prototype principles
             in our product development lifecycle due to the top quality
             functionality and low risks of failure
           </p>
+        </div>
+        <img
+          alt="Development from Prototype picture"
+          className="relative object-cover w-auto mx-auto my-5 md:my-10"
+          src={pictureDevelopment}
+          placeholder="blurred"
+          loading="lazy"
+          layout="fixed"
+        />
+        <div className="flex flex-col md:flex-row my-auto mx-auto justify-around bg-gray-200 text-black w-full">
+          <div className="flex flex-col md:my-auto mx-auto md:mx-10 mt-6">
+            <h1 className="font-bold text-3xl text-center md:text-5xl">
+              Contact us
+            </h1>
+            <p className="text-lg">Get in touch with Neza Lab now.</p>
+            <Link
+              to="/contact"
+              className="my-2 py-2 bg-gray-800 hover:bg-gray-900 text-white text-center font-semibold w-full"
+            >
+              Talk with us
+            </Link>
+          </div>
+          <img
+            alt="Contact Phone Picture"
+            className="relative object-cover w-auto my-5 md:my-10"
+            src={pictureContact}
+            placeholder="blurred"
+            loading="lazy"
+            layout="fixed"
+          />
         </div>
       </section>
     </Layout>
