@@ -18,7 +18,7 @@ const navigation = [
 ];
 
 const activeLinkStyles = {
-  color: "#58595B",
+  color: "#000000",
   fontWeight: "bold",
   textDecoration: "underline",
   textDecorationColor: "#F19E39",
@@ -32,7 +32,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="text-gray-900 ">
+    <Disclosure as="nav" className="text-gray-900 top-0 sticky">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 z-50">

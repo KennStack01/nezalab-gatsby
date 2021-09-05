@@ -14,7 +14,7 @@ function Header() {
   // `);
 
   return (
-    <header className="bg-white shadow-sm top-0 sticky">
+    <header className="bg-white shadow-sm">
       <Navbar />
     </header>
   );

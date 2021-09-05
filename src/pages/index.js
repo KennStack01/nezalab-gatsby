@@ -64,11 +64,27 @@ function IndexPage() {
         </div>
       </div>
       <section className="">
-        {/* <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        /> */}
+        <div className="flex flex-row justify-around text-black text-xl md:text-4xl font-semibold my-5 md:my-10">
+          <h1>
+            Reliable<span className="text-jaffa-500">.</span>
+          </h1>
+          <h1>
+            Creative<span className="text-jaffa-500">.</span>
+          </h1>
+          <h1>
+            Fast<span className="text-jaffa-500">.</span>
+          </h1>
+        </div>
+        <div className="flex flex-col my-14 md:my-24 text-black">
+          <h1 className="text-lg md:text-3xl font-semibold md:font-bold mx-auto ">
+            Our Development principle
+          </h1>
+          <p className="mx-3 my-3 md:my-8 md:mx-60 text-center">
+            We are so thrilled and proud of following the prototype principles
+            in our product development lifecycle due to the top quality
+            functionality and low risks of failure
+          </p>
+        </div>
       </section>
     </Layout>
   );
