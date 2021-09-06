@@ -3,6 +3,7 @@ import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import HeroSection from "../components/HeroSection";
 import { useSpring, animated } from "react-spring";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -127,14 +128,16 @@ function IndexPage() {
               Talk with us
             </Link>
           </div>
-          <img
-            alt="Contact Phone Picture"
-            className="relative object-cover w-auto my-5 md:my-10"
-            src={pictureContact}
-            placeholder="blurred"
-            loading="lazy"
-            layout="fixed"
-          />
+          <animated.div style={fade}>
+            <img
+              alt="Contact Phone Picture"
+              className="relative object-cover w-auto my-5 md:my-10"
+              src={pictureContact}
+              placeholder="blurred"
+              loading="lazy"
+              layout="fixed"
+            />
+          </animated.div>
         </div>
       </section>
     </Layout>

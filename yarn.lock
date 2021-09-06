@@ -1034,7 +1034,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.6":
+"@babel/runtime@^7.14.6", "@babel/runtime@^7.3.1":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
@@ -1736,7 +1736,17 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@react-spring/animated@~9.2.0":
+"@react-spring/addons@^9.0.0-beta.33":
+  version "9.0.0-beta.33"
+  resolved "https://registry.yarnpkg.com/@react-spring/addons/-/addons-9.0.0-beta.33.tgz#0948301c271758f7a52aa39a1d96d4db65c6dd9b"
+  integrity sha512-/QJ5vcq54oljT1n4dSx9maYGaIKzz5WRuKGa12fhLD2JsYo9syTc9S3VH4qmAM4pkbggUQdiaA/AJWack4NF7A==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    "@react-spring/animated" "^9.0.0-beta.33"
+    "@react-spring/core" "^9.0.0-beta.33"
+    use-memo-one "^1.1.0"
+
+"@react-spring/animated@^9.0.0-beta.33", "@react-spring/animated@~9.2.0":
   version "9.2.4"
   resolved "https://registry.npmjs.org/@react-spring/animated/-/animated-9.2.4.tgz"
   integrity sha512-AfV6ZM8pCCAT29GY5C8/1bOPjZrv/7kD0vedjiE/tEYvNDwg9GlscrvsTViWR2XykJoYrDfdkYArrldWpsCJ5g==
@@ -1744,7 +1754,7 @@
     "@react-spring/shared" "~9.2.0"
     "@react-spring/types" "~9.2.0"
 
-"@react-spring/core@~9.2.0":
+"@react-spring/core@^9.0.0-beta.33", "@react-spring/core@~9.2.0":
   version "9.2.4"
   resolved "https://registry.npmjs.org/@react-spring/core/-/core-9.2.4.tgz"
   integrity sha512-R+PwyfsjiuYCWqaTTfCpYpRmsP0h87RNm7uxC1Uxy7QAHUfHEm2sAHn+AdHPwq/MbVwDssVT8C5yf2WGcqiXGg==
@@ -1773,12 +1783,20 @@
     "@react-spring/shared" "~9.2.0"
     "@react-spring/types" "~9.2.0"
 
+"@react-spring/parallax@^9.2.4":
+  version "9.2.4"
+  resolved "https://registry.yarnpkg.com/@react-spring/parallax/-/parallax-9.2.4.tgz#7409e82ccb29ee943adb4a99142ed97cb6170d4d"
+  integrity sha512-sdyyGVxWR3ePfjyqLh41b5gok1oOxdVJNCJIDm6ZZTPVxjc0aaHXTTEyw0UWae+V8Z/0zokivuURaBiN+tsMUA==
+  dependencies:
+    "@react-spring/shared" "~9.2.0"
+    "@react-spring/web" "~9.2.0"
+
 "@react-spring/rafz@~9.2.0":
   version "9.2.4"
   resolved "https://registry.npmjs.org/@react-spring/rafz/-/rafz-9.2.4.tgz"
   integrity sha512-SOKf9eue+vAX+DGo7kWYNl9i9J3gPUlQjifIcV9Bzw9h3i30wPOOP0TjS7iMG/kLp2cdHQYDNFte6nt23VAZkQ==
 
-"@react-spring/shared@~9.2.0":
+"@react-spring/shared@^9.2.4", "@react-spring/shared@~9.2.0":
   version "9.2.4"
   resolved "https://registry.npmjs.org/@react-spring/shared/-/shared-9.2.4.tgz"
   integrity sha512-ZEr4l2BxmyFRUvRA2VCkPfCJii4E7cGkwbjmTBx1EmcGrOnde/V2eF5dxqCTY3k35QuCegkrWe0coRJVkh8q2Q==
@@ -14404,6 +14422,11 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-memo-one@^1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/use-memo-one/-/use-memo-one-1.1.2.tgz#0c8203a329f76e040047a35a1197defe342fab20"
+  integrity sha512-u2qFKtxLsia/r8qG0ZKkbytbztzRb317XCkT7yP8wxL0tZ/CzK2G+WWie5vWvpyeP7+YoPIwbJoIHJ4Ba4k0oQ==
 
 use@^3.1.0:
   version "3.1.1"

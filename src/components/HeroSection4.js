@@ -4,8 +4,8 @@ import { useSpring, animated } from "react-spring";
 
 const HeroSection4 = ({ description, picture }) => {
   const fade = useSpring({
-    from: { opacity: 0, marginTop: -100 },
-    to: { opacity: 2, marginTop: 300 },
+    from: { opacity: 0, marginLeft: -100 },
+    to: { opacity: 2, marginLeft: 40 },
     delay: 700,
   });
 
