@@ -108,7 +108,7 @@ function IndexPage() {
         </div>
         <img
           alt="Development from Prototype picture"
-          className="relative object-cover w-auto mx-auto my-5 md:my-10"
+          className="w-auto mx-auto my-5 md:my-10"
           src={pictureDevelopment}
           placeholder="blurred"
           loading="lazy"

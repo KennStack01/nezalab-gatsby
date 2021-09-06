@@ -1,6 +1,6 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: ["./src/**/*.js"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
       sans: ["Helvetica", "poppins light", "ui-sans-serif", "system-ui"],

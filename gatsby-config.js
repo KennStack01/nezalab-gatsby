@@ -16,7 +16,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     // `gatsby-plugin-sharp`,
-    // `gatsby-transformer-sharp`, // Needed for dynamic images
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`, // Not installed
+    // `gatsby-transformer-sharp`, // Not installed
+    // Needed for dynamic images
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -66,18 +69,19 @@ module.exports = {
         icon: `src/images/circle-64.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
-      },
-    },
+    `gatsby-plugin-postcss`,
+    // {
+    //   resolve: `gatsby-plugin-postcss`,
+    //   options: {
+    //     postCssPlugins: [
+    //       require(`tailwindcss`)(tailwindConfig),
+    //       require(`autoprefixer`),
+    //       ...(process.env.NODE_ENV === `production`
+    //         ? [require(`cssnano`)]
+    //         : []),
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-offline`,
   ],
 };
