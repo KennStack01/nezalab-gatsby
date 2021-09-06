@@ -2,9 +2,11 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import HeroSection from "../components/HeroSection";
+import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+
 // import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
 function IndexPage() {
@@ -38,6 +40,12 @@ function IndexPage() {
   const pictureDevelopment = data.datoCmsHomePageContent.developmentPicture.url;
   const pictureContact = data.datoCmsHomePageContent.contactPicture.url;
 
+  const fade = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 400,
+  });
+
   return (
     <Layout>
       <SEO
@@ -62,13 +70,16 @@ function IndexPage() {
         title="Home"
       />
       <div>
-        <h1 className="text-4xl sm:text-7xl font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10">
+        <animated.h1
+          style={fade}
+          className="text-4xl sm:text-7xl font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10"
+        >
           {" "}
           We are <br /> <span className="text-jaffa-500">
             {" "}
             Productive.
           </span>{" "}
-        </h1>
+        </animated.h1>
         <div className="">
           <HeroSection description={description} picture={pictureUrl} />
         </div>

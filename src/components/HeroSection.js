@@ -1,13 +1,23 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { useSpring, animated } from "react-spring";
 
 const HeroSection = ({ description, picture }) => {
+  const fade = useSpring({
+    from: { opacity: 0, marginTop: -100 },
+    to: { opacity: 2, marginTop: 300 },
+    delay: 700,
+  });
+
   return (
     <div className="mt-0">
-      <p className="absolute text-xs md:text-lg z-40 mt-24 md:mt-72 ml-3 md:ml-10 w-1/2 invisible md:visible">
+      <animated.p
+        style={fade}
+        className="absolute text-xs md:text-lg z-40 mt-24 md:mt-72 ml-3 md:ml-10 w-1/2 invisible md:visible"
+      >
         {" "}
         {description}{" "}
-      </p>
+      </animated.p>
       <img
         alt="Hero picture"
         className="relative object-cover w-full"
