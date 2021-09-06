@@ -2,6 +2,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import HeroSection4 from "../components/HeroSection4";
+import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -28,6 +29,12 @@ function Team() {
     data.datoCmsTeamPageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsTeamPageContent.heroPicture.url;
 
+  const fade = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 400,
+  });
+
   return (
     <Layout>
       <SEO
@@ -52,10 +59,13 @@ function Team() {
         title="Team"
       />
       <div>
-        <h1 className="text-4xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10">
+        <animated.h1
+          style={fade}
+          className="text-4xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10"
+        >
           {" "}
           Our <br /> <span className="text-jaffa-500"> Team.</span>{" "}
-        </h1>
+        </animated.h1>
         <div className="">
           <HeroSection4 description={description} picture={pictureUrl} />
         </div>

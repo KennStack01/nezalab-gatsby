@@ -2,6 +2,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import HeroSection3 from "../components/HeroSection3";
+import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -28,6 +29,12 @@ function Products() {
     data.datoCmsProductsPageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsProductsPageContent.heroPicture.url;
 
+  const fade = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 400,
+  });
+
   return (
     <Layout>
       <SEO
@@ -52,14 +59,17 @@ function Products() {
         title="Products"
       />
       <div>
-        <h1 className="text-3xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-6 md:mt-24 ml-5 sm:ml-10">
+        <animated.h1
+          style={fade}
+          className="text-3xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-6 md:mt-24 ml-5 sm:ml-10"
+        >
           {" "}
           Our <br />{" "}
           <span className="text-jaffa-500">
             {" "}
             Products <br /> & Services.
           </span>{" "}
-        </h1>
+        </animated.h1>
         <div className="">
           <HeroSection3 description={description} picture={pictureUrl} />
         </div>
