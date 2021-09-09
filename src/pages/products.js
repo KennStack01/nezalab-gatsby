@@ -6,7 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Product from "../components/Product/Product";
+// import Product from "../components/Product/Product";
 
 function Products() {
   const data = useStaticQuery(graphql`
@@ -51,12 +51,12 @@ function Products() {
   const pictureUrl = data.datoCmsProductsPageContent.heroPicture.url;
 
   // Product
-  const productPictureUrl = data.allDatoCmsProduct.edges.node.logo.url;
-  const productName = data.allDatoCmsProduct.edges.node.name;
-  const productDescription =
-    data.allDatoCmsProduct.edges.node.descriptionNode.internal.content;
-  const productDetails =
-    data.allDatoCmsProduct.edges.node.allTheDetailsNode.internal.content;
+  // const productPictureUrl = data.allDatoCmsProduct.edges.node.logo.url;
+  // const productName = data.allDatoCmsProduct.edges.node.name;
+  // const productDescription =
+  //   data.allDatoCmsProduct.edges.node.descriptionNode.internal.content;
+  // const productDetails =
+  //   data.allDatoCmsProduct.edges.node.allTheDetailsNode.internal.content;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -110,14 +110,14 @@ function Products() {
               Products
             </h1>
             <div className="grid grid-cols-2 place-content-center mx-auto">
-              {data.allDatoCmsProduct.edges.map((product) => (
+              {data.allDatoCmsProduct.edges.map(({ node: product }) => (
                 <div key={product.id}>
-                  <Product
+                  {/* <Product
                     pictureUrl={productPictureUrl}
                     name={productName}
                     description={productDescription}
                     productDetails={productDetails}
-                  />
+                  /> */}
                 </div>
               ))}
             </div>
