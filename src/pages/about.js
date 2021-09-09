@@ -6,6 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Timeline from "../components/About/Timeline";
 // import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
 function About() {
@@ -21,6 +22,9 @@ function About() {
             content
           }
         }
+        timelinePicture {
+          url
+        }
       }
     }
   `);
@@ -28,6 +32,7 @@ function About() {
   const description =
     data.datoCmsAboutPageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsAboutPageContent.heroPicture.url;
+  // const timelinePictureUrl = data.datoCmsAboutPageContent.timelinePicture.url;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -71,11 +76,55 @@ function About() {
         </div>
       </div>
       <section className="">
-        {/* <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        /> */}
+        <div className="flex flex-col md:flex-row md:justify-around bg-gray-200 text-black w-full py-4 md:py-8">
+          <div className="flex flex-col justify-center my-auto">
+            <h1 className="font-bold text-2xl md:text-3xl text-center">
+              <span className="text-jaffa-500">Our </span> Mission
+            </h1>
+            <p className="text-center font-light mx-6 md:mx-16 my-3 md:my-6 text-sm md:text-md">
+              Our mission is to create possibilities and opportunities in
+              communities with the use of innovative technological products and
+              services.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center md:my-auto mt-5">
+            <h1 className="font-bold text-2xl md:text-3xl text-center">
+              <span className="text-jaffa-500">Our </span> Vision
+            </h1>
+            <p className="text-center font-light mx-6 md:mx-16 my-3 md:my-6 text-sm md:text-md">
+              Our vision is to make an impact in people’s lives by creating
+              innovative technological tools for their problems and needs.
+            </p>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="my-10 md:my-28 mx-auto">
+          <h1 className="text-xl md:text-3xl font-bold text-black text-center">
+            History of Neza Lab
+          </h1>
+          {/* Timeline Picture and Details */}
+          {/* <div className="flex flex-row">
+            <img
+              alt="Timeline picture"
+              className="relative object-cover w-full"
+              src={timelinePictureUrl}
+              placeholder="blurred"
+              loading="lazy"
+              // layout="fixed"
+            />
+            <div className="absolute text-black -mt-90 mr-0">
+              <p>
+                It all started with a student who came to China to study and
+                base on all the challenges faced by foreigners in China, he
+                decided to help lend a helping hand by solving most of thess
+                problems.
+              </p>
+            </div>
+          </div> */}
+
+          <Timeline />
+        </div>
       </section>
     </Layout>
   );

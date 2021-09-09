@@ -115,7 +115,7 @@ function IndexPage() {
           loading="lazy"
           layout="fixed"
         />
-        <div className="flex flex-col md:flex-row my-auto mx-auto justify-around bg-gray-200 text-black w-full">
+        <div className="flex flex-col md:flex-row my-auto mx-auto -mb-7 justify-around bg-gray-200 text-black w-full">
           <div className="flex flex-col md:my-auto mx-auto md:mx-10 mt-6">
             <h1 className="font-bold text-3xl text-center md:text-5xl">
               Contact us
