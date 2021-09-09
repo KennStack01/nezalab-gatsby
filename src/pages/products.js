@@ -6,7 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Product from "../components/Product/Product";
 
 function Products() {
   const data = useStaticQuery(graphql`
@@ -22,12 +22,41 @@ function Products() {
           }
         }
       }
+      allDatoCmsProduct {
+        edges {
+          node {
+            logo {
+              url
+            }
+            name
+            descriptionNode {
+              internal {
+                content
+              }
+            }
+            allTheDetailsNode {
+              internal {
+                content
+              }
+            }
+            id
+          }
+        }
+      }
     }
   `);
 
   const description =
     data.datoCmsProductsPageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsProductsPageContent.heroPicture.url;
+
+  // Product
+  const productPictureUrl = data.allDatoCmsProduct.edges.node.logo.url;
+  const productName = data.allDatoCmsProduct.edges.node.name;
+  const productDescription =
+    data.allDatoCmsProduct.edges.node.descriptionNode.internal.content;
+  const productDetails =
+    data.allDatoCmsProduct.edges.node.allTheDetailsNode.internal.content;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -74,12 +103,34 @@ function Products() {
           <HeroSection3 description={description} picture={pictureUrl} />
         </div>
       </div>
-      <section className="">
-        {/* <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        /> */}
+      <section className="text-black">
+        <div className="my-4 md:my-8 mx-40">
+          <div className="mx-auto grid grid-cols-1 divide-y divide-yellow-500">
+            <h1 className="text-xl md:text-3xl font-semibold md:font-bold">
+              Products
+            </h1>
+            <div className="grid grid-cols-2 place-content-center mx-auto">
+              {data.allDatoCmsProduct.edges.map((product) => (
+                <div key={product.id}>
+                  <Product
+                    pictureUrl={productPictureUrl}
+                    name={productName}
+                    description={productDescription}
+                    productDetails={productDetails}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="my-4 md:my-8 mx-40">
+          <div className="mx-auto grid grid-cols-1 divide-y divide-yellow-500">
+            <h1 className="text-xl md:text-3xl font-semibold md:font-bold">
+              Services
+            </h1>
+            <div className="">{/* Services Map */}</div>
+          </div>
+        </div>
       </section>
     </Layout>
   );
