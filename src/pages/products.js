@@ -148,7 +148,7 @@ function Products() {
             </div>
           </div>
         </div>
-        <div className="my-4 md:my-8 mx-40">
+        <div className="my-4 md:my-8 mx-8 md:mx-40">
           <div className="mx-auto grid grid-cols-1 divide-y divide-yellow-500">
             <h1 className="text-xl md:text-3xl font-semibold md:font-bold">
               Services
