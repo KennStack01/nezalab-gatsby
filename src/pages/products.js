@@ -6,7 +6,8 @@ import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import Product from "../components/Product/Product";
+import Product from "../components/Product/Product";
+import Service from "../components/Product/Service";
 
 function Products() {
   const data = useStaticQuery(graphql`
@@ -40,6 +41,29 @@ function Products() {
               }
             }
             id
+            slug
+          }
+        }
+      }
+      allDatoCmsService {
+        edges {
+          node {
+            logo {
+              url
+            }
+            nameOfService
+            descriptionNode {
+              internal {
+                content
+              }
+            }
+            detailsNode {
+              internal {
+                content
+              }
+            }
+            id
+            slug
           }
         }
       }
@@ -104,20 +128,21 @@ function Products() {
         </div>
       </div>
       <section className="text-black">
-        <div className="my-4 md:my-8 mx-40">
+        <div className="my-4 md:my-8 mx-8 md:mx-40">
           <div className="mx-auto grid grid-cols-1 divide-y divide-yellow-500">
             <h1 className="text-xl md:text-3xl font-semibold md:font-bold">
               Products
             </h1>
-            <div className="grid grid-cols-2 place-content-center mx-auto">
+            <div className="md:grid grid-cols-2 place-content-center mx-auto">
               {data.allDatoCmsProduct.edges.map(({ node: product }) => (
                 <div key={product.id}>
-                  {/* <Product
-                    pictureUrl={productPictureUrl}
-                    name={productName}
-                    description={productDescription}
-                    productDetails={productDetails}
-                  /> */}
+                  <Product
+                    pictureUrl={product.logo.url}
+                    name={product.name}
+                    description={product.descriptionNode.internal.content}
+                    productDetails={product.allTheDetailsNode.internal.content}
+                    slug={product.slug}
+                  />
                 </div>
               ))}
             </div>
@@ -128,7 +153,19 @@ function Products() {
             <h1 className="text-xl md:text-3xl font-semibold md:font-bold">
               Services
             </h1>
-            <div className="">{/* Services Map */}</div>
+            <div className="md:grid grid-cols-2 place-content-center mx-auto">
+              {data.allDatoCmsService.edges.map(({ node: service }) => (
+                <div key={service.id}>
+                  <Service
+                    pictureUrl={service.logo.url}
+                    name={service.nameOfService}
+                    description={service.descriptionNode.internal.content}
+                    serviceDetails={service.detailsNode.internal.content}
+                    slug={service.slug}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
