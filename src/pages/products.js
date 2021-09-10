@@ -41,7 +41,7 @@ function Products() {
               }
             }
             id
-            slug
+            websiteLink
           }
         }
       }
@@ -63,7 +63,7 @@ function Products() {
               }
             }
             id
-            slug
+            websiteLink
           }
         }
       }
@@ -141,7 +141,7 @@ function Products() {
                     name={product.name}
                     description={product.descriptionNode.internal.content}
                     productDetails={product.allTheDetailsNode.internal.content}
-                    slug={product.slug}
+                    link={product.websiteLink}
                   />
                 </div>
               ))}
@@ -161,7 +161,7 @@ function Products() {
                     name={service.nameOfService}
                     description={service.descriptionNode.internal.content}
                     serviceDetails={service.detailsNode.internal.content}
-                    slug={service.slug}
+                    link={service.websiteLink}
                   />
                 </div>
               ))}
