@@ -22,12 +22,26 @@ function Team() {
           }
         }
       }
+      allDatoCmsTeamMember {
+        edges {
+          node {
+            profilePicture {
+              url
+            }
+            name
+            role
+            id
+          }
+        }
+      }
     }
   `);
 
   const description =
     data.datoCmsTeamPageContent.descriptionNode.internal.content;
   const pictureUrl = data.datoCmsTeamPageContent.heroPicture.url;
+
+  const teamMembers = data.allDatoCmsTeamMember.edges;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -71,11 +85,34 @@ function Team() {
         </div>
       </div>
       <section className="">
-        {/* <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        /> */}
+        <div className="my-7 text-center text-black">
+          <h1 className="font-bold text-xl md:text-3xl">
+            Our Development principle
+          </h1>
+          <p>Meet the amazing team behind all amazing Neza Lab products</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 place-content-center">
+          {teamMembers.map(({ node: member }) => (
+            <div
+              key={member.id}
+              className="flex flex-col text-black mx-auto my-5"
+            >
+              <img
+                alt={member.name}
+                className="relative object-cover"
+                src={member.profilePicture.url}
+                placeholder="blurred"
+                loading="lazy"
+                // layout="fixed"
+              />
+              <h2 className="font-semibold md:font-bold mx-auto">
+                {" "}
+                {member.name}{" "}
+              </h2>
+              <p className="font-medium mx-auto"> {member.role} </p>
+            </div>
+          ))}
+        </div>
       </section>
     </Layout>
   );
