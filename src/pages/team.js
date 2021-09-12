@@ -22,7 +22,7 @@ function Team() {
           }
         }
       }
-      allDatoCmsTeamMember {
+      allDatoCmsTeamMember(sort: { order: ASC, fields: meta___createdAt }) {
         edges {
           node {
             profilePicture {
