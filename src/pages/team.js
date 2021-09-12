@@ -91,11 +91,11 @@ function Team() {
           </h1>
           <p>Meet the amazing team behind all amazing Neza Lab products</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 place-content-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 place-content-center mx-2 md:mx-14">
           {teamMembers.map(({ node: member }) => (
             <div
               key={member.id}
-              className="flex flex-col text-black mx-auto my-5"
+              className="flex flex-col text-black mx-3 md:mx-12 my-5"
             >
               <img
                 alt={member.name}
@@ -105,11 +105,14 @@ function Team() {
                 loading="lazy"
                 // layout="fixed"
               />
-              <h2 className="font-semibold md:font-bold mx-auto">
+              <h2 className="font-semibold md:font-bold mx-auto text-xs md:text-lg text-center">
                 {" "}
                 {member.name}{" "}
               </h2>
-              <p className="font-medium mx-auto"> {member.role} </p>
+              <p className="font-medium mx-auto text-xs md:text-md text-center">
+                {" "}
+                {member.role}{" "}
+              </p>
             </div>
           ))}
         </div>
