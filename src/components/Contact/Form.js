@@ -9,7 +9,7 @@ const Form = () => {
           <form
             className="mb-4 md:flex md:flex-wrap md:justify-between"
             method="post"
-            action={`https://getform.io/f/09c7f2c7-1e46-443f-baf0-bb394a33cb78`}
+            // action={`https://getform.io/f/09c7f2c7-1e46-443f-baf0-bb394a33cb78`}
           >
             <div className="flex flex-col mb-4 md:w-full">
               <label
@@ -142,7 +142,7 @@ const Form = () => {
             <div className="mt-10 md:mx-auto">
               <button
                 type="submit"
-                className="flex flex-row mx-auto justify-evenly text-white bg-jaffa-500 font-bold py-4 md:py-2 px-6 text-xl rounded-md"
+                className="flex flex-row mx-auto justify-evenly text-white bg-jaffa-500 hover:bg-jaffa-700 font-bold py-4 md:py-2 px-6 text-xl rounded-md"
               >
                 <h2 className="my-auto">Send {` `}</h2>
                 <RiSendPlaneFill className="text-3xl my-auto" />
