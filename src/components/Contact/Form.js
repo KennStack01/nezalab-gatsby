@@ -9,7 +9,7 @@ const Form = () => {
           <form
             className="mb-4 md:flex md:flex-wrap md:justify-between"
             method="post"
-            // action={`https://getform.io/f/09c7f2c7-1e46-443f-baf0-bb394a33cb78`}
+            action={`https://getform.io/f/e2419428-661a-4a22-acb4-d246cf183763`}
           >
             <div className="flex flex-col mb-4 md:w-full">
               <label
