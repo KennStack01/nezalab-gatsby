@@ -13,7 +13,7 @@ const HeroSection2 = ({ description, picture }) => {
     <div className="mt-0">
       <animated.p
         style={fade}
-        className="absolute text-xs md:text-lg text-gray-900 font-semibold z-40 mt-24 md:mt-72 ml-3 md:ml-10 w-1/2 invisible md:visible"
+        className="absolute text-xs md:text-lg text-gray-900 font-semibold z-40 mt-24 md:mt-72 ml-3 md:ml-10 w-1/3 invisible md:visible"
       >
         {" "}
         {description}{" "}

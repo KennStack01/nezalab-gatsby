@@ -76,8 +76,8 @@ function About() {
         </div>
       </div>
       <section className="">
-        <div className="flex flex-col md:flex-row md:justify-around bg-gray-200 text-black w-full py-4 md:py-8">
-          <div className="flex flex-col justify-center my-auto">
+        <div className="flex flex-col md:flex-row md:justify-around md:bg-gray-200 text-black w-full py-4 md:py-8">
+          <div className="flex flex-col justify-center my-4 md:my-auto shadow rounded-md md:shadow-none mx-4">
             <h1 className="font-bold text-2xl md:text-3xl text-center">
               <span className="text-jaffa-500">Our </span> Mission
             </h1>
@@ -87,7 +87,7 @@ function About() {
               services.
             </p>
           </div>
-          <div className="flex flex-col justify-center md:my-auto mt-5">
+          <div className="flex flex-col justify-center  my-4 md:my-auto shadow rounded-md md:shadow-none mx-4">
             <h1 className="font-bold text-2xl md:text-3xl text-center">
               <span className="text-jaffa-500">Our </span> Vision
             </h1>
@@ -100,7 +100,7 @@ function About() {
 
         {/* Timeline */}
         <div className="my-10 md:my-28 mx-auto">
-          <h1 className="text-xl md:text-3xl font-bold text-black text-center">
+          <h1 className="text-xl md:text-3xl my-5 md:my-8 font-bold text-black text-center">
             History of Neza Lab
           </h1>
           {/* Timeline Picture and Details */}
