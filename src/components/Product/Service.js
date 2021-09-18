@@ -15,7 +15,7 @@ const Service = ({ pictureUrl, name, description, serviceDetails, link }) => {
   });
 
   return (
-    <div className="flex flex-col my-14 md:my-8 bg-gray-100 p-4 rounded-lg md:mx-5 hover:shadow">
+    <div className="flex flex-col my-14 md:my-8 md:h-5/6  bg-gray-100 p-4 rounded-lg md:mx-5 hover:shadow">
       <div className="mx-auto text-center">
         {/* Picture */}
         <animated.div style={fade}>
@@ -34,9 +34,10 @@ const Service = ({ pictureUrl, name, description, serviceDetails, link }) => {
         </h3>
       </div>
       {/* Description */}
-      <p className="text-md md:text-lg font-normal md:font-light mx-4 md:mx-8 my-2 md:my-4 text-justify">
+      <p className="text-md font-normal md:font-light mx-4 md:mx-8 my-2 md:my-4 text-justify">
         {" "}
-        {description}{" "}
+        {description.substring(1, 140)}
+        {" ..."}
       </p>
       {/* <button className="bg-gray-600 hover:bg-jaffa py-2 px-3 my-3 md:my-4 text-white font-semibold self-center rounded">
         <Link to={`/Services/${slug}`}>Discover</Link>
@@ -81,18 +82,21 @@ const Service = ({ pictureUrl, name, description, serviceDetails, link }) => {
                   >
                     Close
                   </button>
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="bg-jaffa text-white active:bg-jaffa-600 font-bold uppercase text-sm px-6 py-3 rounded hover:shadow shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  >
-                    <div className="flex flex-row justify-between ">
-                      <span>Website</span>
-                      <div className="">
-                        <FiExternalLink />
+                  <a href={link} target="_blank" rel="noreferrer">
+                    <button
+                      className={`${
+                        link === ""
+                          ? "hidden"
+                          : "bg-jaffa text-white active:bg-jaffa-600 font-bold uppercase text-sm px-6 py-3 rounded hover:shadow shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      } `}
+                    >
+                      <div className="flex flex-row justify-between ">
+                        <span>Website</span>
+                        <div className="">
+                          <FiExternalLink />
+                        </div>
                       </div>
-                    </div>
+                    </button>
                   </a>
                 </div>
               </div>

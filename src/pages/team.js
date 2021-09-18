@@ -6,7 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import TeamMember from "../components/Team/TeamMember";
 
 function Team() {
   const data = useStaticQuery(graphql`
@@ -16,13 +16,10 @@ function Team() {
           filename
           url
         }
-        descriptionNode {
-          internal {
-            content
-          }
-        }
+        developmentPrincipleForTeamPage
       }
-      allDatoCmsTeamMember(sort: { order: ASC, fields: meta___createdAt }) {
+
+      allDatoCmsTeamMember {
         edges {
           node {
             profilePicture {
@@ -30,7 +27,11 @@ function Team() {
             }
             name
             role
-            id
+            memberSRoleDescriptionNode {
+              internal {
+                content
+              }
+            }
           }
         }
       }
@@ -42,6 +43,8 @@ function Team() {
   const pictureUrl = data.datoCmsTeamPageContent.heroPicture.url;
 
   const teamMembers = data.allDatoCmsTeamMember.edges;
+  const developmentPrinciple =
+    data.datoCmsTeamPageContent.developmentPrincipleForTeamPage;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -89,31 +92,44 @@ function Team() {
           <h1 className="font-bold text-xl md:text-3xl">
             Our Development principle
           </h1>
-          <p>Meet the amazing team behind all amazing Neza Lab products</p>
+          <p>{developmentPrinciple}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 place-content-center mx-2 md:mx-14">
           {teamMembers.map(({ node: member }) => (
             <div
-              key={member.id}
+              key={member.node.id}
               className="flex flex-col text-black mx-3 md:mx-12 my-5"
             >
-              <img
-                alt={member.name}
-                className="relative object-cover"
-                src={member.profilePicture.url}
-                placeholder="blurred"
-                loading="lazy"
-                // layout="fixed"
+              <TeamMember
+                pictureLink={member.node.profilePicture.url}
+                name={member.node.name}
+                role={member.node.role}
+                description={
+                  member.node.memberSRoleDescriptionNode.internal.content
+                }
               />
-              <h2 className="font-semibold md:font-bold mx-auto text-xs md:text-lg text-center">
-                {" "}
-                {member.name}{" "}
-              </h2>
-              <p className="font-medium mx-auto text-xs md:text-md text-center">
-                {" "}
-                {member.role}{" "}
-              </p>
             </div>
+            // <div
+            //   key={member.id}
+            //   className="flex flex-col text-black mx-3 md:mx-12 my-5"
+            // >
+            //   <img
+            //     alt={member.name}
+            //     className="relative object-cover"
+            //     src={member.profilePicture.url}
+            //     placeholder="blurred"
+            //     loading="lazy"
+            //     // layout="fixed"
+            //   />
+            //   <h2 className="font-semibold md:font-bold mx-auto text-xs md:text-lg text-center">
+            //     {" "}
+            //     {member.name}{" "}
+            //   </h2>
+            //   <p className="font-medium mx-auto text-xs md:text-md text-center">
+            //     {" "}
+            //     {member.role}{" "}
+            //   </p>
+            // </div>
           ))}
         </div>
       </section>

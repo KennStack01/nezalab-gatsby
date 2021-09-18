@@ -31,6 +31,11 @@ function IndexPage() {
           filename
           url
         }
+        developmentPrincipleNode {
+          internal {
+            content
+          }
+        }
       }
     }
   `);
@@ -40,6 +45,8 @@ function IndexPage() {
   const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
   const pictureDevelopment = data.datoCmsHomePageContent.developmentPicture.url;
   const pictureContact = data.datoCmsHomePageContent.contactPicture.url;
+  const developmentPrinciple =
+    data.datoCmsHomePageContent.developmentPrincipleNode.internal.content;
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -102,9 +109,7 @@ function IndexPage() {
             Our Development principle
           </h1>
           <p className="mx-3 my-3 md:my-8 md:mx-60 text-center md:text-xl">
-            We are so thrilled and proud of following the prototype principles
-            in our product development lifecycle due to the top quality
-            functionality and low risks of failure
+            {developmentPrinciple}
           </p>
         </div>
         <img
