@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import HeroesCarousel from "./Home/HeroesCarousel";
 
-const HeroSection = ({ description, picture }) => {
+const HeroSection = ({ description }) => {
   const fade = useSpring({
     from: { opacity: 0, marginTop: -100 },
     to: { opacity: 2, marginTop: 300 },
@@ -18,14 +19,25 @@ const HeroSection = ({ description, picture }) => {
         {" "}
         {description}{" "}
       </animated.p>
-      <img
-        alt="Hero picture"
-        className="relative object-cover w-full"
-        src={picture}
-        placeholder="blurred"
-        loading="lazy"
-        // layout="fixed"
-      />
+      {/* {data.allDatoCmsHomePageContent.edges.map((picture) => (
+          // <div
+          //   key={picture.node.heroPicturesGallery.filename}
+          //   style={{
+          //     backgroundImage: `url(${picture.node.heroPicturesGallery.url})`,
+          //   }}
+          // ></div>
+          // <img
+          //   key={picture.node.heroPicturesGallery.filename}
+          //   alt="Hero picture"
+          //   className="relative object-cover w-full"
+          //   src={picture.node.heroPicturesGallery.url}
+          //   placeholder="blurred"
+          //   loading="lazy"
+          //   // layout="fixed"
+          // />
+        ))} */}
+      <HeroesCarousel />
+
       <p className="text-xs text-gray-900 text-center mx-14 z-40 mt-10 mb-8 xs:visible md:invisible">
         {" "}
         {description}{" "}

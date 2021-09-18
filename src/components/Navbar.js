@@ -62,7 +62,7 @@ export default function Navbar() {
               <div className="flex-1 flex items-center justify-start sm:items-start sm:justify-end md:flex-row md:justify-between">
                 <Link
                   to="/"
-                  className="flex-shrink-0 flex items-center my-auto"
+                  className="flex-shrink-0 flex items-center my-auto md:mx-5"
                 >
                   {/* <Logo width={100} /> */}
                   <img

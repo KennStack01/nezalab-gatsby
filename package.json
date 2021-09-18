@@ -4,6 +4,7 @@
   "version": "5.0.0",
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
     "@headlessui/react": "^1.4.1",
     "@react-spring/addons": "^9.0.0-beta.33",
     "@react-spring/parallax": "^9.2.4",

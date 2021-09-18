@@ -42,7 +42,7 @@ function IndexPage() {
 
   const description =
     data.datoCmsHomePageContent.descriptionNode.internal.content;
-  const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
+  // const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
   const pictureDevelopment = data.datoCmsHomePageContent.developmentPicture.url;
   const pictureContact = data.datoCmsHomePageContent.contactPicture.url;
   const developmentPrinciple =
@@ -89,7 +89,7 @@ function IndexPage() {
           </span>{" "}
         </animated.h1>
         <div className="">
-          <HeroSection description={description} picture={pictureUrl} />
+          <HeroSection description={description} />
         </div>
       </div>
       <section className="">
