@@ -16,10 +16,11 @@ function Team() {
           filename
           url
         }
+        description
         developmentPrincipleForTeamPage
       }
 
-      allDatoCmsTeamMember {
+      allDatoCmsTeamMember(sort: { fields: meta___createdAt }) {
         edges {
           node {
             profilePicture {
@@ -38,8 +39,7 @@ function Team() {
     }
   `);
 
-  const description =
-    data.datoCmsTeamPageContent.descriptionNode.internal.content;
+  const description = data.datoCmsTeamPageContent.description || "";
   const pictureUrl = data.datoCmsTeamPageContent.heroPicture.url;
 
   const teamMembers = data.allDatoCmsTeamMember.edges;
@@ -97,16 +97,15 @@ function Team() {
         <div className="grid grid-cols-2 md:grid-cols-3 place-content-center mx-2 md:mx-14">
           {teamMembers.map(({ node: member }) => (
             <div
-              key={member.node.id}
+              key={member.id}
               className="flex flex-col text-black mx-3 md:mx-12 my-5"
             >
               <TeamMember
-                pictureLink={member.node.profilePicture.url}
-                name={member.node.name}
-                role={member.node.role}
-                description={
-                  member.node.memberSRoleDescriptionNode.internal.content
-                }
+                key={member.id}
+                pictureURL={member.profilePicture.url}
+                name={member.name}
+                role={member.role}
+                description={member.memberSRoleDescriptionNode.internal.content}
               />
             </div>
             // <div

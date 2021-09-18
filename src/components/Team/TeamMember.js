@@ -1,16 +1,33 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { useSpring, animated } from "react-spring";
 
 function TeamMember({ name, pictureURL, role, description }) {
   const [showText, setShowText] = React.useState(false);
+
+  const fade = useSpring({
+    from: { marginTop: -100 },
+    to: { marginTop: 180 },
+    delay: 600,
+  });
 
   return (
     <div
       onMouseOver={() => setShowText(true)}
       onMouseOut={() => setShowText(false)}
-      className=""
+      className="relative cursor-pointer"
     >
-      <p className={showText ? "" : "hidden"}> {description} </p>
+      <animated.p
+        style={fade}
+        className={
+          showText
+            ? "absolute z-50 bg-white text-gray-800 p-3 rounded-b-md shadow-md text-sm backdrop-filter backdrop-blur-lg"
+            : "hidden"
+        }
+      >
+        {" "}
+        {description}{" "}
+      </animated.p>
       <img
         alt={name}
         className="relative object-cover"
