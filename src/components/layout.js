@@ -1,14 +1,23 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Link } from "gatsby";
-
+import { Link, graphql, useStaticQuery } from "gatsby";
 import Header from "./header";
-
 import { SiFacebook } from "react-icons/si";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
-import Logo from "../assets/NezaLab-Logo-white.svg";
+// import Logo from "../assets/NezaLab-Logo-white.svg";
 function Layout({ children }) {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsLogo {
+        nezaLogo {
+          url
+        }
+        blackLogo
+      }
+    }
+  `);
+
   return (
     <div className="flex flex-col min-h-screen font-sans text-white">
       <div className="">
@@ -23,7 +32,12 @@ function Layout({ children }) {
       >
         <nav className="md:max-w-4xl p-4 mx-auto text-sm md:p-8">
           <div className="flex md:flex-row justify-between">
-            <Logo width={100} className="" />
+            {/* <Logo width={100} className="" /> */}
+            <img
+              src={data.datoCmsLogo.nezaLogo.url}
+              alt={data.datoCmsLogo.blackLogo}
+              width={100}
+            />
             <div className="flex flex-row justify-between text-md">
               <div className="flex flex-col mx-4 md:mx-16">
                 <Link to="/" className="my-2 hover:underline">
