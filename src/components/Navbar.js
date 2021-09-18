@@ -1,13 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 // import { Fragment } from 'react'
 import { Disclosure } from "@headlessui/react";
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { CgClose } from "react-icons/cg";
 import { RiMenu3Line } from "react-icons/ri";
 // import { StaticImage } from "gatsby-plugin-image";
-import Logo from "../assets/NezaLab-Logo.svg";
+// import Logo from "../assets/NezaLab-Logo.svg";
 
 const navigation = [
   { name: "Home", route: "/", current: false },
@@ -31,6 +31,17 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsLogo {
+        nezaLogo {
+          url
+        }
+        blackLogo
+      }
+    }
+  `);
+
   return (
     <Disclosure as="nav" className="text-gray-900 top-0 sticky">
       {({ open }) => (
@@ -53,7 +64,12 @@ export default function Navbar() {
                   to="/"
                   className="flex-shrink-0 flex items-center my-auto"
                 >
-                  <Logo width={100} />
+                  {/* <Logo width={100} /> */}
+                  <img
+                    src={data.datoCmsLogo.nezaLogo.url}
+                    alt={data.datoCmsLogo.blackLogo}
+                    width={50}
+                  />
                   {/* <StaticImage
                     src="../images/creafrika-btp.png"
                     width={120}
