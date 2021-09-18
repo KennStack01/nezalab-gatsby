@@ -55,7 +55,7 @@ const Form = () => {
                 type="text"
                 name="business_name"
                 id="business_name"
-                placeholder="Neza LAB"
+                placeholder="Neza Lab Technology"
               />
             </div>
             {/* <div className="flex flex-col mb-4 md:w-full">

@@ -19,6 +19,9 @@ const Timeline = () => {
             descriptionContent
             date(locale: "en", formatString: "MMMM YYYY")
             id
+            iconColor {
+              rgb
+            }
           }
         }
         totalCount
@@ -31,14 +34,14 @@ const Timeline = () => {
       <VerticalTimeline className="text-black">
         {data.allDatoCmsTimelineContent.edges.map((timeline) => (
           <VerticalTimelineElement
+            key={timeline.node.id}
             className="vertical-timeline-element--work"
             date={timeline.node.date}
             iconStyle={{
-              background: "rgb(33, 150, 243)",
+              background: `${timeline.node.iconColor.rgb}`,
               color: "#fff",
             }}
             icon={<FaBusinessTime />}
-            key={timeline.node.id}
           >
             <h3 className="vertical-timeline-element-title"></h3>
             <h4 className="vertical-timeline-element-subtitle"></h4>
