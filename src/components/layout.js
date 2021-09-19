@@ -18,6 +18,17 @@ function Layout({ children }) {
   //   }
   // `);
 
+  if (typeof window !== `undefined`) {
+    // import Isotope API
+    // const Isotope = require("isotope-layout/js/isotope");
+    return 0;
+    // init Isotope
+    // this.grid = new Isotope(`.${isotopeStyles.grid}`, {
+    //   itemSelector: `.${isotopeStyles.elementItem}`,
+    //   layoutMode: "fitRows",
+    // });
+  }
+
   return (
     <div className="flex flex-col min-h-screen font-sans text-white">
       <div className="">

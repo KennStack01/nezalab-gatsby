@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-import-assign */
+/* eslint-disable import/no-unresolved */
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Carousel, {
