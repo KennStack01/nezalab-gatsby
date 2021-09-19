@@ -21,7 +21,7 @@ function TeamMember({ name, pictureURL, role, description }) {
         style={fade}
         className={
           showText
-            ? "absolute z-50 bg-white text-gray-800 p-3 rounded-b-md shadow-md text-sm backdrop-filter backdrop-blur-lg"
+            ? "absolute z-50 bg-white text-gray-800 p-1 md:p-3 rounded-b-md shadow-md text-xs md:text-sm backdrop-filter backdrop-blur-lg"
             : "hidden"
         }
       >
