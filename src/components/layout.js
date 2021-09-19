@@ -6,6 +6,14 @@ import { SiFacebook } from "react-icons/si";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 import Logo from "../assets/NezaLab-Logo-white.svg";
+
+const isBrowser = () => typeof window !== "undefined";
+
+// node
+isBrowser(); // false
+
+// browser
+isBrowser(); // true
 function Layout({ children }) {
   // const data = useStaticQuery(graphql`
   //   query {
@@ -17,10 +25,6 @@ function Layout({ children }) {
   //     }
   //   }
   // `);
-
-  if (typeof window !== "undefined") {
-    // it's safe to use window now
-  }
 
   return (
     <div className="flex flex-col min-h-screen font-sans text-white">
