@@ -7,13 +7,6 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 
 import Logo from "../assets/NezaLab-Logo-white.svg";
 
-const isBrowser = () => typeof window !== "undefined";
-
-// node
-isBrowser(); // false
-
-// browser
-isBrowser(); // true
 function Layout({ children }) {
   // const data = useStaticQuery(graphql`
   //   query {
