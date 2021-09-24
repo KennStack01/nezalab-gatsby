@@ -21,7 +21,7 @@ function Layout({ children }) {
 
   return (
     <div className="flex flex-col min-h-screen font-sans text-white">
-      <div className="">
+      <div className="top-0 sticky z-50">
         <Header />
       </div>
 

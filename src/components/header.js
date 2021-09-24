@@ -14,7 +14,7 @@ function Header() {
   // `);
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className=" hadow-sm top-0 sticky md:backdrop-filter md:backdrop-blur-xl backdrop-brightness-75">
       <Navbar />
     </header>
   );

@@ -80,8 +80,8 @@ export default function Navbar() {
                     alt="WebContract Logo"
                   /> */}
                 </Link>
-                <div className="hidden sm:block sm:ml-6 my-auto">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:block sm:ml-6 my-auto mx-0">
+                  <div className="flex space-x-4 justify-items-stretch lg:space-x-7">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
@@ -90,7 +90,7 @@ export default function Navbar() {
                           item.current
                             ? "bg-white text-gray-600"
                             : "text-gray-900",
-                          "py-3 px-8 text-sm font-semibold hover:underline"
+                          "py-3 px-8 text-sm md:text-md lg:text-lg font-semibold hover:underline"
                         )}
                         aria-current={item.current ? "page" : undefined}
                         activeStyle={activeLinkStyles}
