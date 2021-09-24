@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "gatsby";
 import Header from "./header";
-import { SiFacebook } from "react-icons/si";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import { SiFacebook, SiInstagram } from "react-icons/si";
+// import { AiFillTwitterCircle } from "react-icons/ai";
 
 import Logo from "../assets/NezaLab-Logo-white.svg";
 
@@ -62,21 +62,21 @@ function Layout({ children }) {
               <h3 className="mx-auto mb-2">Connect with us:</h3>
               <div className="flex flex-row justify-center">
                 <a
-                  href="https://twitter.com/KennKIBADI"
-                  target="__blank"
-                  className="flex flex-row justify-center text-white "
-                >
-                  <div className="text-3xl md:text-4xl mx-1">
-                    <AiFillTwitterCircle />
-                  </div>
-                </a>
-                <a
-                  href="https://twitter.com/KennKIBADI"
+                  href="https://www.facebook.com/neza.lab.3"
                   target="__blank"
                   className="flex flex-row justify-center text-white "
                 >
                   <div className="text-3xl md:text-3xl mx-1 my-auto">
                     <SiFacebook />
+                  </div>
+                </a>
+                <a
+                  href="https://www.instagram.com/nezalabtech/"
+                  target="__blank"
+                  className="flex flex-row justify-center text-white "
+                >
+                  <div className="text-3xl md:text-3xl mx-1 my-auto">
+                    <SiInstagram />
                   </div>
                 </a>
               </div>
@@ -87,21 +87,21 @@ function Layout({ children }) {
             <h3 className="mx-auto mb-2 text-md">Connect with us:</h3>
             <div className="flex flex-row justify-center">
               <a
-                href="https://twitter.com/KennKIBADI"
-                target="__blank"
-                className="flex flex-row justify-center text-white "
-              >
-                <div className="text-3xl md:text-4xl mx-1">
-                  <AiFillTwitterCircle />
-                </div>
-              </a>
-              <a
-                href="https://twitter.com/KennKIBADI"
+                href="https://www.facebook.com/neza.lab.3"
                 target="__blank"
                 className="flex flex-row justify-center text-white "
               >
                 <div className="text-3xl md:text-3xl mx-1 my-auto">
                   <SiFacebook />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/nezalabtech/"
+                target="__blank"
+                className="flex flex-row justify-center text-white "
+              >
+                <div className="text-3xl md:text-3xl mx-1 my-auto">
+                  <SiInstagram />
                 </div>
               </a>
             </div>
