@@ -36,7 +36,7 @@ const Product = ({ pictureUrl, name, description, productDetails, link }) => {
       {/* Description */}
       <p className="text-md font-normal md:font-light mx-4 md:mx-8 my-2 md:my-4 text-justify">
         {" "}
-        {description.substring(1, 140)}
+        {description.substring(0, 140)}
         {" ..."}
       </p>
       {/* <button className="bg-gray-600 hover:bg-jaffa py-2 px-3 my-3 md:my-4 text-white font-semibold self-center rounded">
