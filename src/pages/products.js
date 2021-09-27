@@ -17,6 +17,8 @@ function Products() {
           filename
           url
         }
+        headingPart1
+        headingPart2
         descriptionNode {
           internal {
             content
@@ -72,6 +74,8 @@ function Products() {
 
   const description =
     data.datoCmsProductsPageContent.descriptionNode.internal.content;
+  const headingPart1 = data.datoCmsProductsPageContent.headingPart1;
+  const headingPart2 = data.datoCmsProductsPageContent.headingPart2;
   const pictureUrl = data.datoCmsProductsPageContent.heroPicture.url;
 
   // Product
@@ -117,11 +121,8 @@ function Products() {
           className="text-3xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-6 md:mt-24 ml-5 sm:ml-10"
         >
           {" "}
-          Our <br />{" "}
-          <span className="text-jaffa-500">
-            {" "}
-            Products <br /> & Services.
-          </span>{" "}
+          {headingPart1} <br />{" "}
+          <span className="text-jaffa-500"> {headingPart2}</span>{" "}
         </animated.h1>
         <div className="">
           <HeroSection3 description={description} picture={pictureUrl} />

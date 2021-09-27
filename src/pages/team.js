@@ -16,6 +16,8 @@ function Team() {
           filename
           url
         }
+        headingPart1
+        headingPart2
         description
         developmentPrincipleForTeamPage
       }
@@ -41,6 +43,8 @@ function Team() {
 
   const description = data.datoCmsTeamPageContent.description || "";
   const pictureUrl = data.datoCmsTeamPageContent.heroPicture.url;
+  const headingPart1 = data.datoCmsTeamPageContent.headingPart1;
+  const headingPart2 = data.datoCmsTeamPageContent.headingPart2;
 
   const teamMembers = data.allDatoCmsTeamMember.edges;
   const developmentPrinciple =
@@ -81,7 +85,8 @@ function Team() {
           className="text-4xl sm:text-6xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10"
         >
           {" "}
-          Our <br /> <span className="text-jaffa-500"> Team.</span>{" "}
+          {headingPart1}
+          <br /> <span className="text-jaffa-500">{headingPart2}</span>{" "}
         </animated.h1>
         <div className="">
           <HeroSection4 description={description} picture={pictureUrl} />

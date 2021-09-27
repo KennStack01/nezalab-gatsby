@@ -18,6 +18,8 @@ function IndexPage() {
           filename
           url
         }
+        headingPart1
+        headingPart2
         descriptionNode {
           internal {
             content
@@ -42,6 +44,8 @@ function IndexPage() {
 
   const description =
     data.datoCmsHomePageContent.descriptionNode.internal.content;
+  const headingPart1 = data.datoCmsHomePageContent.headingPart1;
+  const headingPart2 = data.datoCmsHomePageContent.headingPart2;
   // const pictureUrl = data.datoCmsHomePageContent.heroPicture.url;
   const pictureDevelopment = data.datoCmsHomePageContent.developmentPicture.url;
   const pictureContact = data.datoCmsHomePageContent.contactPicture.url;
@@ -83,10 +87,8 @@ function IndexPage() {
           className="text-4xl sm:text-7xl font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10"
         >
           {" "}
-          We are <br /> <span className="text-jaffa-500">
-            {" "}
-            Productive.
-          </span>{" "}
+          {headingPart1} <br />{" "}
+          <span className="text-jaffa-500"> {headingPart2}</span>{" "}
         </animated.h1>
         <div className="">
           <HeroSection description={description} />

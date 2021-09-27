@@ -17,6 +17,8 @@ function About() {
           filename
           url
         }
+        headingPart1
+        headingPart2
         descriptionNode {
           internal {
             content
@@ -31,6 +33,8 @@ function About() {
 
   const description =
     data.datoCmsAboutPageContent.descriptionNode.internal.content;
+  const headingPart1 = data.datoCmsAboutPageContent.headingPart1;
+  const headingPart2 = data.datoCmsAboutPageContent.headingPart2;
   const pictureUrl = data.datoCmsAboutPageContent.heroPicture.url;
   // const timelinePictureUrl = data.datoCmsAboutPageContent.timelinePicture.url;
 
@@ -69,7 +73,8 @@ function About() {
           className="text-4xl sm:text-7xl text-gray-900 font-bold absolute z-40 mt-12 md:mt-24 ml-5 sm:ml-10"
         >
           {" "}
-          About <br /> <span className="text-jaffa-500"> Neza Lab.</span>{" "}
+          {headingPart1} <br />{" "}
+          <span className="text-jaffa-500"> {headingPart2}</span>{" "}
         </animated.h1>
         <div className="">
           <HeroSection2 description={description} picture={pictureUrl} />
