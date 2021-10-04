@@ -1791,18 +1791,18 @@
     "@react-spring/shared" "~9.2.0"
     "@react-spring/web" "~9.2.0"
 
-"@react-spring/rafz@~9.2.0":
-  version "9.2.4"
-  resolved "https://registry.npmjs.org/@react-spring/rafz/-/rafz-9.2.4.tgz"
-  integrity sha512-SOKf9eue+vAX+DGo7kWYNl9i9J3gPUlQjifIcV9Bzw9h3i30wPOOP0TjS7iMG/kLp2cdHQYDNFte6nt23VAZkQ==
+"@react-spring/rafz@~9.2.5-beta.0":
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.2.5.tgz#517b6bf6407dd791719e5aae11c18fd321c08af1"
+  integrity sha512-FZdbgcBMF1DM/eCnHZ28nHUG984gqcZHWlz2aIfj5TikPTzgVYDECCW/Pvt3ncHLTxikjYn2wvDV3/Q68yqv8A==
 
 "@react-spring/shared@^9.2.4", "@react-spring/shared@~9.2.0":
-  version "9.2.4"
-  resolved "https://registry.npmjs.org/@react-spring/shared/-/shared-9.2.4.tgz"
-  integrity sha512-ZEr4l2BxmyFRUvRA2VCkPfCJii4E7cGkwbjmTBx1EmcGrOnde/V2eF5dxqCTY3k35QuCegkrWe0coRJVkh8q2Q==
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.2.5.tgz#ce96cd1063bd644e820b19d9f3ebce8f6077b872"
+  integrity sha512-kutUl8PN0xBSXBmpnHJVFDsgOCFP448syiCcRfdSsryO8kVfJOcSNT4BzIqmzDCWto/neBQJs2iEhKOZTfwQnA==
   dependencies:
-    "@react-spring/rafz" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
+    "@react-spring/rafz" "~9.2.5-beta.0"
+    "@react-spring/types" "~9.2.5-beta.0"
 
 "@react-spring/three@~9.2.0":
   version "9.2.4"
@@ -1814,10 +1814,10 @@
     "@react-spring/shared" "~9.2.0"
     "@react-spring/types" "~9.2.0"
 
-"@react-spring/types@~9.2.0":
-  version "9.2.4"
-  resolved "https://registry.npmjs.org/@react-spring/types/-/types-9.2.4.tgz"
-  integrity sha512-zHUXrWO8nweUN/ISjrjqU7GgXXvoEbFca1CgiE0TY0H/dqJb3l+Rhx8ecPVNYimzFg3ZZ1/T0egpLop8SOv4aA==
+"@react-spring/types@~9.2.0", "@react-spring/types@~9.2.5-beta.0":
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.2.5.tgz#14eeca9ed7d5beed8c3fc943ee8f365c5c9fa635"
+  integrity sha512-ayitxzSUGO4MTQ6VOeNgUviTV/8nxjwGq6Ie+pFgv6JUlOecwdzo2/apEeHN6ae9tbcxQJx6nuDw/yb590M8Uw==
 
 "@react-spring/web@~9.2.0":
   version "9.2.4"
