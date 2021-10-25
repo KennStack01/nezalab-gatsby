@@ -1034,7 +1034,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.6", "@babel/runtime@^7.3.1":
+"@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.3.1":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
@@ -3686,9 +3686,9 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-charenc@~0.0.1:
+charenc@0.0.2:
   version "0.0.2"
-  resolved "https://registry.npmjs.org/charenc/-/charenc-0.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
 
 cheerio-select@^1.5.0:
@@ -4219,15 +4219,10 @@ core-js@^2.4.0:
   resolved "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.2.1, core-js@^3.4.8:
+core-js@^3.2.1, core-js@^3.4.8, core-js@^3.6.5:
   version "3.17.0"
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.17.0.tgz"
   integrity sha512-zXT4rclS9jM6tikbAUKAGLonuRKOJ2ZvBnZCEOJAbzuTLw4kKcuA5plNt8juzdU6O/py/EgAehzvLh0VXEdBbQ==
-
-core-js@^3.6.5:
-  version "3.16.4"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.16.4.tgz"
-  integrity sha512-Tq4GVE6XCjE+hcyW6hPy0ofN3hwtLudz5ZRdrlCnsnD/xkm/PWQRudzYHiKgZKUcefV6Q57fhDHjZHJP5dpfSg==
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -4389,9 +4384,9 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crypt@~0.0.1:
+crypt@0.0.2:
   version "0.0.2"
-  resolved "https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
   integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
 crypto-browserify@^3.11.0:
@@ -4715,10 +4710,10 @@ date-fns@^2.14.0:
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.23.0.tgz"
   integrity sha512-5ycpauovVyAk0kXNZz6ZoB9AYMZB4DObse7P3BPWmyEjXNORTI8EJ6X0uaSAq4sCHzM1uajzrkr6HnsLQpxGXA==
 
-datocms-client@>=3.4.2:
-  version "3.4.14"
-  resolved "https://registry.npmjs.org/datocms-client/-/datocms-client-3.4.14.tgz"
-  integrity sha512-Aj7FgrD/KZ988r+Gr/ytAKI5fuv+CKzthR8FcT8ZDY+0d3xIOp+GEzebCcGZoWFzDMqO8i5q1se/7vDjwWs/mA==
+datocms-client@>=3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-3.5.4.tgz#dc33a966122bbfa8dd23a0f0906b902b8cf181b9"
+  integrity sha512-V8zfoTFLGdEC3XEIua4JRNQUSO/TQzlq+8Dc/VL4OGwvQv/ngfH6+7CTGtpPRpXGOAVku0hK0UYd6fXcgV5dNQ==
   dependencies:
     "@iarna/toml" "^2.2.3"
     arr-diff "^4.0.0"
@@ -4763,7 +4758,7 @@ datocms-client@>=3.4.2:
     truncate "^2.1.0"
     unist-util-visit "^2.0.3"
     updeep "^1.2.0"
-    wpapi "^1.2.1"
+    wpapi "^1.2.2"
 
 datocms-contentful-to-structured-text@^1.1.3:
   version "1.2.0"
@@ -6816,6 +6811,14 @@ gatsby-plugin-utils@^1.13.0:
   dependencies:
     joi "^17.2.1"
 
+gatsby-plugin-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-2.0.0.tgz#555a8d8122a1716148a71b52cb3adb97d9e09bc4"
+  integrity sha512-RN++hR/gU6orPHlnDM3CUd4DnDdTcGS3vkjHnAvo+Wli7H8yHEt4baoK20f/V3AOOCxwen8TypFH3Uy5iVAjyg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    joi "^17.4.2"
+
 gatsby-react-router-scroll@^3.7.0:
   version "3.7.0"
   resolved "https://registry.npmjs.org/gatsby-react-router-scroll/-/gatsby-react-router-scroll-3.7.0.tgz"
@@ -6887,21 +6890,22 @@ gatsby-recipes@^0.9.3:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-source-datocms@^2.6.16:
-  version "2.6.16"
-  resolved "https://registry.npmjs.org/gatsby-source-datocms/-/gatsby-source-datocms-2.6.16.tgz"
-  integrity sha512-Dwtx8MBycZ2HeF9Rv8xtDIdiVIvw2GXFienSGRoFsVXB2wSLYNCvivEGS+M0SPJAGUHMIjng34GUtVranalAjQ==
+gatsby-source-datocms@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-3.0.5.tgz#facaee680c3e26591dbe4d07baf875a6ae50a638"
+  integrity sha512-zF4NrYSjx4iFr+0XOlMsOo/Wl5ICXsvNUbbhgri7me2gTKYexpiHhozHRy29cmPys/pSkiSVUuIZxtnuZbfhpQ==
   dependencies:
     core-js "^3.2.1"
-    datocms-client ">=3.4.2"
+    datocms-client ">=3.5.4"
     datocms-structured-text-utils "^1.0.13"
     fs-extra ">=8.1.0"
+    gatsby-plugin-utils "^2.0.0"
     got "^11.8.2"
     humps ">=2.0.1"
     imgix-url-params ">=11.11.2"
     json-stringify-safe ">=5.0.1"
     lodash.uniq "^4.5.0"
-    md5 "2.2.1"
+    md5 "2.3.0"
     object-assign "^4.1.1"
     object.entries "^1.1.3"
     promise-queue "2.2.5"
@@ -8248,7 +8252,7 @@ is-boolean-object@^1.1.0:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
 
-is-buffer@^1.1.5, is-buffer@~1.1.1:
+is-buffer@^1.1.5, is-buffer@~1.1.6:
   version "1.1.6"
   resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -8757,7 +8761,7 @@ jimp@^0.14.0:
     "@jimp/types" "^0.14.0"
     regenerator-runtime "^0.13.3"
 
-joi@^17.2.1:
+joi@^17.2.1, joi@^17.4.2:
   version "17.4.2"
   resolved "https://registry.npmjs.org/joi/-/joi-17.4.2.tgz"
   integrity sha512-Lm56PP+n0+Z2A2rfRvsfWVDXGEWjXxatPopkQ8qQ5mxCEhwHG+Ettgg5o98FFaxilOxozoa14cFhrE/hOzh/Nw==
@@ -9394,14 +9398,14 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-md5@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/md5/-/md5-2.2.1.tgz"
-  integrity sha1-U6s41f48iJG6RlMp6iP6wFQBJvk=
+md5@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/md5/-/md5-2.3.0.tgz#c3da9a6aae3a30b46b7b0c349b87b110dc3bda4f"
+  integrity sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==
   dependencies:
-    charenc "~0.0.1"
-    crypt "~0.0.1"
-    is-buffer "~1.1.1"
+    charenc "0.0.2"
+    crypt "0.0.2"
+    is-buffer "~1.1.6"
 
 mdast-util-compact@^2.0.0:
   version "2.0.1"
@@ -14965,9 +14969,9 @@ worker-farm@^1.7.0:
   dependencies:
     errno "~0.1.7"
 
-wpapi@^1.2.1:
+wpapi@^1.2.2:
   version "1.2.2"
-  resolved "https://registry.npmjs.org/wpapi/-/wpapi-1.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/wpapi/-/wpapi-1.2.2.tgz#8db0f0e1d6df8e472d95cbd1bb2c84e6b5ee365c"
   integrity sha512-lkgi8Gjav3SArrCkNpG61ZnmCyamXKB+SjaR8tAoHhSZbJRTeabIlsdqUUAN3JGbVY3ht8p+EGdpCFIaanI5+w==
   dependencies:
     li "^1.3.0"
