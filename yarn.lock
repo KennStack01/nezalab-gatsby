@@ -12013,9 +12013,9 @@ rc@^1.2.7, rc@^1.2.8:
     strip-json-comments "~2.0.1"
 
 react-alice-carousel@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.5.1.tgz#d8b27f942d342bf57367eb2c3301358a28758381"
-  integrity sha512-UeAd+O83TEiCxbDMMd9xAOLRr+xPNFPai9W6cNQgmIfEBgOiKDdntpTnhhwfXKoirXxQcbPlg9eG7FG9D1M4SA==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.6.0.tgz#793646a3459f87cd6ac7719179309d905c03738c"
+  integrity sha512-cBhwRRWflsG1RNBYHzMTQQeUDpWaa8HuexDBLydl27YSYIhnB3VI2LelUIWPT99T+i6Zngn6sxouUyImdzJVSA==
   dependencies:
     vanilla-swipe "^2.2.0"
 
