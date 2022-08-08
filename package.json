@@ -8,7 +8,7 @@
     "@react-spring/addons": "^9.0.0-beta.33",
     "@react-spring/parallax": "^9.2.4",
     "@react-spring/shared": "^9.2.4",
-    "gatsby": "2.32.12",
+    "gatsby": "2.32.13",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "2.12.1",
